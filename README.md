@@ -1,6 +1,7 @@
 # ActiveSpeaker_1way_ESP32
 
 *A mono active speaker system built around an ESP32, featuring a modular real-time DSP pipeline and Bluetooth control. This project explores embedded audio processing on low-cost hardware and serves as a foundation for more advanced DSP experiments.*
+![IMG_6781](https://github.com/user-attachments/assets/4998e6bc-37f2-4178-8a68-510827150cec)
 
 ---
 
