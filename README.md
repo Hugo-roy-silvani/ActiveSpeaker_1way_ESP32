@@ -41,5 +41,22 @@ This hardware setup demonstrates a complete embedded audio path from capture →
 
 ### **Prerequisites**
 - **ESP-IDF ≥ v5.0** (recommended)
-- Python 3.8+
-- USB-serial driver for ESP32 
+- Python 3.10+
+- USB-serial driver for ESP32
+- 
+~~~bash
+#Create projet
+idf.py create-project "project name"
+
+# Configure target and environment
+idf.py set-target esp32
+
+# Build
+idf.py build
+
+# Flash to device
+idf.py flash
+
+# Monitor serial output (Do not use if using GUI)
+idf.py monitor
+~~~
