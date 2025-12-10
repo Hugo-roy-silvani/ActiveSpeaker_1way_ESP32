@@ -30,32 +30,6 @@ float app_bt_get_remote_volume_level(void)
  * data : buffer de PCM interleavé (souvent 16 bits stéréo : L, R, L, R, ...)
  * len  : taille en octets
  */
-/*
-
-static void bt_app_a2d_data_cb(const uint8_t *data, uint32_t len)
-{
-    if (!s_bt_ringbuf || !data || len == 0) {
-        return;
-    }
-
-    // On envoie le buffer tel quel (stéréo 16 bits) dans le ringbuffer
-    BaseType_t ok = xRingbufferSend(
-        s_bt_ringbuf,
-        data,
-        len,
-        0   // ne bloque pas la callback
-    );
-
-    // Optionnel : compter les drops pour debug
-    static uint32_t drop_count = 0;
-    if (ok != pdTRUE) {
-        drop_count++;
-        if ((drop_count % 100) == 0) {
-            ESP_LOGW(TAG, "BT ringbuffer full, dropped %u chunks", (unsigned)drop_count);
-        }
-    }
-}
-    */
 
 static void bt_app_a2d_data_cb(const uint8_t *data, uint32_t len)
 {
