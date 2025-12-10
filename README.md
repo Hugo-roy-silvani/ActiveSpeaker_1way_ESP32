@@ -43,7 +43,7 @@ This hardware setup demonstrates a complete embedded audio path from capture →
 - **ESP-IDF ≥ v5.0** (recommended)
 - Python 3.10+
 - USB-serial driver for ESP32
-- 
+  
 ~~~bash
 #Create projet
 idf.py create-project "project name"
@@ -60,3 +60,16 @@ idf.py flash
 # Monitor serial output (Do not use if using GUI)
 idf.py monitor
 ~~~
+
+## Structure 
+
+ActiveSpeaker_1way_ESP32/  
+│── CMakeLists.txt  
+│── sdkconfig  
+│── main/  
+│   ├── app_audio.h/.c       # I2S drivers, buffering  
+│   ├── app_bt.h/.c            # bluetooth  
+│   ├── app_dsp.h/.c          # DSP  
+│   ├── board_config.h  
+│   └── main.c  
+└── README.md  
